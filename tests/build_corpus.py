@@ -3,7 +3,7 @@ import wikipedia
 import re
 
 subjects = [
-    'Padova', 'Milano', 'Salerno', 'Napoli', 'Bomba atomica', 'Java (linguaggio di programmazione)', 'Vero programmatore', 'Spritz', 'Vaccino',
+    'Milano', 'Salerno', 'Napoli', 'Padova', 'Bomba atomica', 'Java (linguaggio di programmazione)', 'Vero programmatore', 'Spritz', 'Vaccino',
     'MoVimento 5 Stelle', 'Fortnite', 'Complottista', 'Nintendo', 'Game boy', 'Xbox', 'Barba', 'Parigi', 'Euro', 'Lira',
     'Barbone', 'Matteo Salvini', 'Gesù', 'Città del Vaticano', 'Fascismo', 'McDonald\'s', 'Scoreggia', 'Benzinaio', 'Banca',
     'Veneto', 'Pastore sardo', 'Facebook', 'WhatsApp', 'Discord', 'Computer', 'RAM', 'Doom', 'Silvio Berlusconi', 'Una supposta per te', 'Chimica',
