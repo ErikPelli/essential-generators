@@ -14,6 +14,7 @@ Install
 
 Using pip::
 
+    python -m pip install git+https://github.com/ErikPelli/Nonciclopedia-python.git
     pip install essential_generators
 
 
