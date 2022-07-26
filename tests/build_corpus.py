@@ -2,26 +2,22 @@
 import wikipedia
 import re
 
-subjects = ['new york', 'seattle', 'chicago', 'tampa, florida', 'atlanta', 'california', 'alaska', 'virginia', 'montana',
-            'germany', 'brazil', 'argentina', 'mexico', 'canada', 'france', 'belgium', 'denmark', 'japan', 'egypt',
-            'bahamas', 'africa', 'asia', 'europe', 'south america', 'desert', 'mountain', 'river', 'lake', 'ocean',
-             'pacific ocean', 'atlantic ocean', 'earth', 'climate', 'weather', 'cloud',
-             'chemistry', 'chemical compound', 'molecule', 'scientific method',
-             'computer network', 'logical programming', 'semantics',
-             'physics', 'particle accelerator', 'social media', 'journalism', 'lawyer',
-             "newspaper", "programming language", "software performance testing", 'federal perkins loan',
-            'the arts', "social history", "astronomy", "energy", 'robot', "communication", "information",
-            "medicine", 'health', 'ethics', 'laughter', 'sports', 'casino', 'statue', 'nominative determinism',
-            'fun', 'psychology', 'parrots', 'dogs', 'cats', 'animals', 'traffic', 'hotel', 'hollywood', 'random']
-
-
-
+subjects = [
+    'Padova', 'Milano', 'Salerno', 'Napoli', 'Bomba atomica', 'Java (linguaggio di programmazione)', 'Vero programmatore', 'Spritz', 'Vaccino',
+    'MoVimento 5 Stelle', 'Fortnite', 'Complottista', 'Nintendo', 'Game boy', 'Xbox', 'Barba', 'Parigi', 'Euro', 'Lira',
+    'Barbone', 'Matteo Salvini', 'Gesù', 'Città del Vaticano', 'Fascismo', 'McDonald\'s', 'Scoreggia', 'Benzinaio', 'Banca',
+    'Veneto', 'Pastore sardo', 'Facebook', 'WhatsApp', 'Discord', 'Computer', 'RAM', 'Doom', 'Silvio Berlusconi', 'Una supposta per te', 'Chimica',
+    'Economia', 'Spam', 'Trenord', 'Nutella', 'Mr. Bean', 'Natale', 'Intel', 'Cina', 'Mao Zedong', 'Taiwan', 'CIA', 'Cuba', 'Pianta', 'Extraterrestre',
+    'Extracomunitario', 'Giardiniere', 'Inglisc', 'Matteo Renzi', 'Emiglio il meglio', 'Matrix (film)', 'Terminator', 'Android', 'Linux', 'Google',
+    'Apple Inc.', 'Bill Gates', 'John Fitzgerald Kennedy', 'Barack Hussein Obama', 'South Park', 'Sardegna', 'Pecora', 'Krukkia', 'Mario Draghi',
+    'Mastercard', 'Lingua ceca', 'Italiano medio', 'iPhone'
+]
 
 corpus = ""
 
 for subject in subjects:
     try:
-        page = wikipedia.page(subject)
+        page = wikipedia.page(title=subject)
         corpus += page.content
     except:
         print("Failed on: " + subject)
