@@ -2,6 +2,8 @@
 import wikipedia
 import re
 
+from tests.build_text_model import make_training_data
+
 subjects = [
     'Milano', 'Salerno', 'Napoli', 'Padova', 'Bomba atomica', 'Java (linguaggio di programmazione)', 'Vero programmatore', 'Spritz', 'Vaccino',
     'MoVimento 5 Stelle', 'Fortnite', 'Complottista', 'Nintendo', 'Game boy', 'Xbox', 'Barba', 'Parigi', 'Euro', 'Lira',
@@ -26,3 +28,5 @@ corpus = re.sub(r'=+ .+ =+', '', corpus)
 
 with open("corpus.txt", "w", encoding="utf8") as fp:
     fp.write(corpus)
+
+make_training_data()

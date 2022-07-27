@@ -3,6 +3,7 @@ import json
 
 filename = 'markov_textgen.json'
 
+
 def make_training_data(corpus="corpus.txt", output='markov_textgen.json'):
 
     with open(corpus, 'r', encoding='utf-8') as fp:
@@ -16,5 +17,3 @@ def make_training_data(corpus="corpus.txt", output='markov_textgen.json'):
         json_file = json.load(f)
     with open(filename, 'w', encoding='utf-8') as f:
         print(json.dumps(json_file, separators=(',', ':')), file=f)
-
-make_training_data()
