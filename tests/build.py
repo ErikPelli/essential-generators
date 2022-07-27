@@ -1,8 +1,7 @@
-
-import wikipedia
 import re
+from build_text_model import make_training_data
+from wiki import page
 
-from tests.build_text_model import make_training_data
 
 subjects = [
     'Milano', 'Salerno', 'Napoli', 'Padova', 'Bomba atomica', 'Java (linguaggio di programmazione)', 'Vero programmatore', 'Spritz', 'Vaccino',
@@ -19,9 +18,10 @@ corpus = ""
 
 for subject in subjects:
     try:
-        page = wikipedia.page(title=subject)
-        corpus += page.content
-    except:
+        p = page(title=subject)
+        corpus += p.content
+    except Exception as e:
+        print(e)
         print("Failed on: " + subject)
 
 corpus = re.sub(r'=+ .+ =+', '', corpus)
